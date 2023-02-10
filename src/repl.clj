@@ -1,8 +1,7 @@
-(ns src.repl
-  (:require
-   [clojure.java.io :as io]
-   [shadow.css.build :as cb]
-   [shadow.cljs.devtools.server.fs-watch :as fs-watch]))
+(ns repl
+  (:require [clojure.java.io :as io]
+            [shadow.css.build :as cb]
+            [shadow.cljs.devtools.server.fs-watch :as fs-watch]))
 
 (defonce css-ref (atom nil))
 (defonce css-watch-ref (atom nil))
@@ -13,7 +12,7 @@
             (cb/generate '{:ui {:include [bhlie.train-time*]}})
             (cb/write-outputs-to (io/file "resources" "public" "_css")))]
 
-    #_(prn :CSS-GENERATED)
+    (prn :CSS-GENERATED)
     (doseq [mod (:outputs result)
             {:keys [warning-type] :as warning} (:warnings mod)]
       (prn [:CSS (name warning-type) (dissoc warning :warning-type)]))

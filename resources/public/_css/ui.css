@@ -364,7 +364,7 @@ video {
   max-width: 100%;
   height: auto;
 }
-.bhlie_train_time_views__L6_C17 {
+.bhlie_train_time_views__L8_C17 {
   align-items: center;
   background-color: #3b82f6;
   border-radius: 0.25rem;
@@ -374,7 +374,7 @@ video {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
 }
-.bhlie_train_time_views__L9_C36 {
+.bhlie_train_time_views__L11_C36 {
   background-color: #cbd5e1;
   border-radius: 9999px;
   color: #0ea5e9;
@@ -383,30 +383,43 @@ video {
   margin: 0.25rem;
   padding: 1.25rem;
 }
-.bhlie_train_time_views__L16_C17 {
+.bhlie_train_time_views__L19_C17 {
   display: flex;
   justify-content: center;
 }
-.bhlie_train_time_views__L17_C20 {
-  border-radius: 0.25rem;
+.bhlie_train_time_views__L20_C18 {
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
 }
-.bhlie_train_time_views__L18_C27 {
+.bhlie_train_time_views__L22_C21 {
+  border-radius: 0.25rem;
+  margin: 0.75rem;
+}
+.bhlie_train_time_views__L23_C28 {
   border-color: #a7f3d0;
 }
-.bhlie_train_time_views__L20_C56 {
+.bhlie_train_time_views__L26_C27 {
+  border-color: #ecfdf5;
+  border-width: 1px;
+}
+.bhlie_train_time_views__L27_C41 {
   background-color: #3b82f6;
   border-color: #ecfdf5;
   border-width: 1px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   margin: 0.75rem;
   padding: 1.25rem;
 }
-.bhlie_train_time_views__L27_C21 {
+.bhlie_train_time_views__L27_C41:hover {
+  color: #0ea5e9;
+}
+.bhlie_train_time_views__L36_C21 {
   display: flex;
   font-size: 1.875rem;
   justify-content: center;
   line-height: 2.25rem;
 }
-.bhlie_train_time_views__L28_C18 {
+.bhlie_train_time_views__L37_C18 {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   padding: 1rem;
 }
