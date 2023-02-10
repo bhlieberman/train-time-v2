@@ -5,15 +5,26 @@
             [bhlie.train-time.times :refer [times]]))
 
 (defn navbar []
-  [:div {:class (css :bg-blue-500 :rounded :h-24 :flex :justify-center :items-center :mx-5)}
-   [:nav
-    (map (fn [link id] [:a {:key id
-                            :class (css :m-1 :font-mono :font-medium :bg-slate-300 :rounded-full :p-5
-                                        :text-sky-500 :ring
-                                        :ring-red-800)} link])
-         ["Home"
-          "Train schedule"
-          "Plan route"] (range 3))]])
+  (let [tooltip (css :absolute :w-auto :p-2 :m-2 :min-w-max :left-14 :rounded-md :shadow-md
+                     :text-white :bg-gray-900
+                     :text-xs :font-bold
+                     :transition-all :duration-100 :scale-0 :origin-left)]
+    [:div {:class (css :bg-gray-500 :h-24 :flex :flex-col :justify-center
+                       :items-center :fixed :top-0 :left-0 :h-screen :w-32
+                       :shadow-lg)}
+     [:nav
+      (for [lnk ["Home"
+                 "Train schedule"
+                 "Plan route"]
+            :let [idx (range (count lnk))]]
+        [:i {:key idx
+             :class (css :relative :flex :items-center :justify-center :mb-2
+                         :bg-blue-500 :font-bold :border :rounded :p-1
+                         [:hover :bg-blue-900]
+                         [:hover :text-sky-500]
+                         [:hover :rounded-3xl]
+                         :transition-all :duration-300 :ease-linear)} lnk])]
+     ]))
 
 (defn schedule []
   [:div {:class (css :flex :justify-center)}
@@ -24,12 +35,10 @@
            (for [[stations times] times
                  :let [rows (concat [stations] times)]]
              [:tr {:class (css :border :border-emerald-50)}
-              (map (fn [x] [:td {:class (css :m-3 :bg-blue-500
-                                             :border
-                                             :border-emerald-50
-                                             :p-5
-                                             :font-mono
-                                             [:hover :text-sky-500])} x]) rows)]))]]])
+              (map (fn [x] [:td {:class (css :m-3 :bg-blue-500 :border 
+                                             :border-emerald-50 :p-5 :font-mono
+                                             [:hover :text-sky-500]
+                                             [:hover :bg-blue-900])} x]) rows)]))]]])
 
 (defn main []
   [:<>
